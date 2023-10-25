@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 19:42:45 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/25 20:08:31 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/25 21:00:30 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char *ft_strchr(char *str, char c)
+char	*ft_strchr(char *str, char c)
 {
 	if (str == NULL || c == '\0')
 		return (NULL);

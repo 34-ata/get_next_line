@@ -12,11 +12,14 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
+	${CC} ${NAME} test.c
+	./a.out
 
 clean:
 	rm -rf *.o
 
 fclean: clean
 	rm -rf $(NAME)
+	rm -rf a.out
 
 re:	fclean all

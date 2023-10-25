@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:47:14 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/25 20:12:09 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/25 20:58:40 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*refill(int fd, char *buffer)
 char	*get_line_ssd(char *buffer)
 {
 	size_t		i;
-	char	*res;
+	char		*res;
 
 	i = 0;
 	if (buffer[i] == 0)
@@ -80,7 +80,7 @@ char	*get_next_line(int fd)
 char	*cut_line(char *buffer, int len)
 {
 	char	*temp;
-	size_t		i;
+	size_t	i;
 
 	if (buffer[len] == 0)
 	{
