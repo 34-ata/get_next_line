@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:47:14 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/25 20:58:40 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/25 21:36:18 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,17 +47,17 @@ char	*get_line_ssd(char *buffer)
 		return (NULL);
 	while (buffer[i] && buffer[i] != '\n')
 		i++;
-	res = malloc(sizeof(char) * (i + 2));
+	if (buffer[i] == '\n')
+		res = malloc(sizeof(char) * (i + 2));
+	else
+		res = malloc(sizeof(char) * (i + 1));
 	if (res == NULL)
 		return (NULL);
-	i = -1;
-	while (buffer[++i] && buffer[i] != '\n')
-		res[i] = buffer[i];
+	i = 0;
+	while (buffer[i] && buffer[i] != '\n')
+		(void)((res[i] = buffer[i]) && (i++, 1));
 	if (buffer[i] == '\n')
-	{
-		res[i] = buffer[i];
-		i++;
-	}
+		(void)((res[i] = buffer[i]) && (i++, 1));
 	res[i] = 0;
 	return (res);
 }
@@ -83,10 +83,7 @@ char	*cut_line(char *buffer, int len)
 	size_t	i;
 
 	if (buffer[len] == 0)
-	{
-		free(buffer);
-		return (NULL);
-	}
+		return (free(buffer), NULL);
 	temp = malloc((ft_strlen(buffer) - len + 1) * sizeof(char));
 	if (temp == NULL)
 		return (NULL);

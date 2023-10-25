@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 19:42:45 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/25 21:00:30 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/25 21:40:21 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,8 @@ char	*ft_strjoin(char *s1, char *s2)
 		s1 = malloc(sizeof(char) * 1);
 		s1[0] = '\0';
 	}
-	if (!s1 || !s2)
-		return (NULL);
 	res = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (res == NULL)
+	if (!res)
 		return (NULL);
 	j = 0;
 	i = 0;
