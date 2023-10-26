@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:47:14 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/25 21:43:19 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/26 15:31:13 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char	*refill(int fd, char *buffer)
 		if (byte_readed == -1)
 		{
 			free(temp);
+			free(buffer);
 			return (NULL);
 		}
 		temp[byte_readed] = 0;
