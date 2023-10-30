@@ -6,11 +6,11 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:47:14 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/30 15:10:20 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/30 16:49:31 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*refill(int fd, char *buffer)
 {
@@ -64,13 +64,13 @@ char	*get_line_ssd(char *buffer)
 
 char	*get_next_line(int fd)
 {
-	static char	*buffer[4096];
+	static char	*buffer[1024];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	buffer[fd] = refill(fd, buffer[fd]);
-	if (!buffer[fd])
+	if (buffer[fd] == NULL)
 		return (NULL);
 	line = get_line_ssd(buffer[fd]);
 	buffer[fd] = cut_line(buffer[fd], ft_strlen(line));

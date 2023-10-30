@@ -6,11 +6,11 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 19:42:45 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/30 15:05:42 by faata            ###   ########.fr       */
+/*   Updated: 2023/10/30 15:23:39 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int	ft_strlen(char *str)
 {
