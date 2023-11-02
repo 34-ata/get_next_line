@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
+/*   By: faata <faata@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 19:42:45 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/30 15:23:39 by faata            ###   ########.fr       */
+/*   Created: 2023/10/24 19:42:45 by faata	           #+#    #+#             */
+/*   Updated: 2023/11/02 11:55:28 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	i = 0;
 	while (s2[i])
 		res[j++] = s2[i++];
-	res[ft_strlen(s1) + ft_strlen(s2)] = '\0';
+	res[j] = '\0';
 	free(s1);
 	return (res);
 }
