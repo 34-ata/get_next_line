@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
+/*   By: faata <faata@student.42istanbul.com.tr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:47:14 by faata             #+#    #+#             */
 /*   Updated: 2023/11/02 15:28:02 by faata            ###   ########.fr       */
